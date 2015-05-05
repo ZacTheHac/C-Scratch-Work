@@ -30,12 +30,18 @@
     <ClInclude Include="CIS023_S2015_Lab20 Zachary Muerle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="quadrupedClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CIS023_S2015_Lab20 Zachary Muerle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="quadrupedClass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
