@@ -19,4 +19,5 @@
 
 
 // TODO: reference additional headers your program requires here
+#include <math.h> 
 #include "quadrupedClass.h"
