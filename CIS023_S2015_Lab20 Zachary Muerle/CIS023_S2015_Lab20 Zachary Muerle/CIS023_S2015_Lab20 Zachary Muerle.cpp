@@ -12,6 +12,7 @@ TCHAR szTitle[MAX_LOADSTRING];					// The title bar text
 TCHAR szWindowClass[MAX_LOADSTRING];			// the main window class name
 
 quadrupedClass *Dog = new quadrupedClass;
+int iTimer = 0;
 
 // Forward declarations of functions included in this code module:
 ATOM				MyRegisterClass(HINSTANCE hInstance);
@@ -142,7 +143,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		switch (wmId)
 		{
 		case IDM_GO:
-			SetTimer(hWnd, WM_TIMER, 50, NULL);//set a timer for every 50ms, and don't end the first time
+			if (iTimer != 0)
+				KillTimer(hWnd, iTimer);
+			iTimer = SetTimer(hWnd, WM_TIMER, 50, NULL);//set a timer for every 50ms, and don't end the first time
 			Dog->reset();
 			Dog->MoveDirection(DOWN | RIGHT, hWnd);
 			InvalidateRect(hWnd, NULL, true);//re-draw hWnd: the rectangle of EVERYTHING, and confirm

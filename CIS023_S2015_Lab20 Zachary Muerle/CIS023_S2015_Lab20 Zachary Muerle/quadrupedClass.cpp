@@ -77,14 +77,14 @@ void quadrupedClass::Draw(HDC hdc)const{
 	//back
 	DrawLine(hdc, Back.Start, Back.End);
 	//legs
-		//front
-	SelectObject(hdc, penFront);//change the pen
-	DrawLine(hdc, LegFF.Start, LegFF.End);
-	DrawLine(hdc, LegBF.Start, LegBF.End);
 		//back
 	SelectObject(hdc, penBack);//change the pen
 	DrawLine(hdc, LegBB.Start, LegBB.End);
 	DrawLine(hdc, LegFB.Start, LegFB.End);
+		//front
+	SelectObject(hdc, penFront);//change the pen
+	DrawLine(hdc, LegFF.Start, LegFF.End);
+	DrawLine(hdc, LegBF.Start, LegBF.End);
 
 
 	//reset hdc
